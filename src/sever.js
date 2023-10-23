@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
 const handleBars = require("express-handlebars");
+const methodOverride = require("method-override");
 const path = require("path"); // Import the path module
 const route = require("./routes/routes.js");
 const db = require("./config/db");
@@ -14,6 +15,8 @@ const app = express();
 //Using port .env
 const port = process.env.PORT || 3001;
 
+//set method GET POST PUT PATCH
+app.use(methodOverride("_method"));
 //Loading logo
 app.use(express.static(path.join(__dirname, "public")));
 // use middleware
