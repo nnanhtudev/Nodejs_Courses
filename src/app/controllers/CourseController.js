@@ -15,16 +15,17 @@ class CourseController {
     res.render("courses/create");
   }
   // [POST] /course/store
-  async store(req, res) {
+  store(req, res) {
     const formData = req.body;
     formData.image = `https://img.youtube.com/vi/${req.body.videoId}/sddefault.jpg`;
+
     const course = new Course(formData);
-    try {
-      await course.save();
-      res.redirect("/");
-    } catch (error) {
-      res.status(400).send("Save Failed");
-    }
+    course
+      .save()
+      .then(() => {
+        res.redirect("/");
+      })
+      .catch((error) => {});
   }
 }
 
