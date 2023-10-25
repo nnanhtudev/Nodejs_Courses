@@ -1,5 +1,10 @@
 <div class="mt-4">
-  <h3>My Courses</h3>
+  <div class="header-course">
+    <h3>My Courses</h3>
+    <div class="ml-auto">
+    <a href="/me/trash/courses"><img class="img-trash" src="/images/trash.png" alt=""></a> 
+    </div>
+  </div>
     <table class="table mt-4">
       <thead>
         <tr>
@@ -23,6 +28,13 @@
               <a href=""  class="btn btn-outline-danger" data-id="{{this._id}}" data-toggle="modal" data-target="#delete-course-modal">Delete</a>
             </td>
         </tr>
+        {{else}}
+        <th>
+          <td class="text-center" colspan="5">
+            You haven't posted any courses yet!
+            <a href="/courses/create">Post Your Course Now.</a>
+          </td>
+        </th>
         {{/each}}
       </tbody>
     </table>

@@ -1,11 +1,28 @@
 @import 'variables';
 .card-course-item{
-  margin-top: 16px;
+  height: 100%;
 }
-
+.header-course{
+  display: flex;
+  align-items: center;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-img-top{
+  justify-items: center;
+}
 .user-avt{
   width: 28px;
   height: 28px;
   border-radius: 50%;
   margin-right: 4px ;
+}
+.img-trash{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-left: 10px;
 }
