@@ -14,18 +14,12 @@ class MeController {
   }
   // [GET] me/trash/courses
   trashCourses(req, res, next) {
-    // Course.findDeleted()
-    //   .then((courses) => {
-    //     res.render("me/trash-courses", { courses: multipleMongooseToObject(courses) });
-    //   })
-    //   .catch(next);
-    Course.findDeleted({})
+    Course.findDeleted({ deletedAt: { $exists: true } })
       .then((courses) => {
+        res.render("me/trash-courses", { courses: multipleMongooseToObject(courses) });
         console.log(courses);
       })
-      .catch((err) => {
-        console.error(err);
-      });
+      .catch(next);
   }
 }
 
