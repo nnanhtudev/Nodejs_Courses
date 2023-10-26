@@ -4,6 +4,7 @@
       <a href="/me/stored/courses"><img class="img-trash" src="/images/back.png" alt=""></a>
     </div>
     <h3>My Courses Deleted</h3>
+    
   </div>
   <table class="table mt-4">
     <thead>
@@ -11,7 +12,7 @@
         <th scope="col">#</th>
         <th scope="col">Name Courses</th>
         <th scope="col">Level</th>
-        <th scope="col" colspan="4">Creation time</th>
+        <th scope="col" colspan="4">Time Deleted</th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +21,7 @@
         <th scope="row">{{sum @index 1}}</th>
         <td>{{this.name}}</td>
         <td>{{this.level}}</td>
-        <td>{{this.createdAt}}</td>
+        <td>{{this.deletedAt}}</td>
         <td>
           <a href="" class="btn btn-success btn-restore" data-id="{{this._id}}">Restore</a>
         </td>
