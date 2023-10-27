@@ -50,5 +50,5 @@ route(app);
 
 //Running app listening port .env
 app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`);
+  console.log(`App listening at http://localhost:${port}/Nodejs_Courses`);
 });

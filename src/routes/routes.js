@@ -7,7 +7,7 @@ function route(app) {
   app.use("/news", newsRouter);
   app.use("/me", meRouter);
   app.use("/courses", coursesRouter);
-  app.use("/", sitesRouter);
+  app.use("/Nodejs_Courses", sitesRouter);
 }
 
 module.exports = route;
